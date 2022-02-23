@@ -4,7 +4,7 @@ these are the changes I made, you can see it here https://github.com/userquin/vi
 - `package.json`: add `"type": "module"`
 - `vite.config.ts`: changed the import for `VueI18n` and included some entries on `optimizedDeps/include` option
 - `tsconfig.json`: changed `module` to `ESNext` instead `es2016`
-- `src/components/ChartComponent.vue`  using `vue-echarts/dist/index.esm.js` instead `vue-echarts` (maybe we need to also change the `package.json` of `vue-charts`)
+- `src/components/ChartComponent.vue`  using `vue-echarts/dist/index.esm.js` instead `vue-echarts` (maybe we need to also change the `package.json` of `vue-echarts`)
 - `pnpm install`: once dependencies installed you must modify the following dependencies (we can also apply something similar to `echarts`...)
 
 **node_modules/echarts**
@@ -62,4 +62,7 @@ these are the changes I made, you can see it here https://github.com/userquin/vi
 - `dist/index.esm.js`: replace `import { addListener, removeListener } from 'resize-detector';` with `import { addListener, removeListener } from 'resize-detector/esm/index.js';`
 
 **node_modules/resize-detector**
+- `package.json` add  `"type": "module"`
+- 
+**node_modules/zrender**
 - `package.json` add  `"type": "module"`
