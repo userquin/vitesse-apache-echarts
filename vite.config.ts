@@ -133,7 +133,6 @@ export default defineConfig({
       '@vueuse/core',
       '@vueuse/head',
       'echarts/core',
-      'echarts/core',
       'echarts/renderers',
       'echarts/charts',
       'echarts/components',
