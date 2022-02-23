@@ -58,8 +58,28 @@ these are the changes I made, you can see it here https://github.com/userquin/vi
  ```
 
 **node_modules/vue-echarts**
-- `package.json` add  `"type": "module"`
 - `dist/index.esm.js`: replace `import { addListener, removeListener } from 'resize-detector';` with `import { addListener, removeListener } from 'resize-detector/esm/index.js';`
+- `package.json` add  `"type": "module"`, add also `exports` entry before `main` entry, the file should be like this:
+```json
+  "type": "module",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "npm run docs && rimraf dist && rollup -c rollup.config.js && cp src/index.vue2.d.ts dist",
+    "lint": "vue-cli-service lint",
+    "build:demo": "vue-cli-service build",
+    "docs": "node -r esm ./scripts/docs.js",
+    "postinstall": "node ./scripts/postinstall.js",
+    "prepare": "npm run build"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.esm.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+},
+```
 
 **node_modules/resize-detector**
 - `package.json` add  `"type": "module"`

@@ -7,7 +7,7 @@ import {
   TitleComponent,
   TooltipComponent,
 } from 'echarts/components'
-import VChart, { THEME_KEY } from 'vue-echarts/dist/index.esm.js'
+import VChart, { THEME_KEY } from 'vue-echarts'
 
 use([
   CanvasRenderer,
