@@ -4,6 +4,7 @@ specifiers:
   '@antfu/eslint-config': ^0.16.1
   '@iconify-json/carbon': ^1.1.1
   '@intlify/vite-plugin-vue-i18n': ^3.3.0
+  '@types/echarts': ^4.9.13
   '@types/markdown-it-link-attributes': ^3.0.1
   '@types/nprogress': ^0.2.0
   '@unocss/preset-attributify': ^0.26.2
@@ -18,6 +19,7 @@ specifiers:
   critters: ^0.0.16
   cross-env: ^7.0.3
   cypress: ^9.5.0
+  echarts: ^5.3.0
   eslint: ^8.9.0
   eslint-plugin-cypress: ^2.12.1
   https-localhost: ^4.7.1
@@ -41,6 +43,7 @@ specifiers:
   vitest: ^0.5.3
   vue: ^3.2.31
   vue-demi: ^0.12.1
+  vue-echarts: ^6.0.2
   vue-i18n: ^9.1.9
   vue-router: ^4.0.12
   vue-tsc: ^0.31.4
@@ -48,11 +51,13 @@ specifiers:
 dependencies:
   '@vueuse/core': 7.6.2_vue@3.2.31
   '@vueuse/head': 0.7.5_vue@3.2.31
+  echarts: 5.3.0
   nprogress: 0.2.0
   pinia: 2.0.11_typescript@4.5.5+vue@3.2.31
   prism-theme-vars: 0.2.2
   vue: 3.2.31
   vue-demi: 0.12.1_vue@3.2.31
+  vue-echarts: 6.0.2_echarts@5.3.0+vue@3.2.31
   vue-i18n: 9.1.9_vue@3.2.31
   vue-router: 4.0.12_vue@3.2.31
 
@@ -60,6 +65,7 @@ devDependencies:
   '@antfu/eslint-config': 0.16.1_eslint@8.9.0+typescript@4.5.5
   '@iconify-json/carbon': 1.1.1
   '@intlify/vite-plugin-vue-i18n': 3.3.0_vite@2.8.4+vue-i18n@9.1.9
+  '@types/echarts': 4.9.13
   '@types/markdown-it-link-attributes': 3.0.1
   '@types/nprogress': 0.2.0
   '@unocss/preset-attributify': 0.26.2
@@ -1669,6 +1675,12 @@ packages:
     resolution: {integrity: sha512-/ceqdqeRraGolFTcfoXNiqjyQhZzbINDngeoAq9GoHa8PPK1yNzTaxWjA6BFWp5Ua9JpXEMSS4s5i9tS0hOJtw==}
     dev: true
 
+  /@types/echarts/4.9.13:
+    resolution: {integrity: sha512-xqZ21MXOBU5i+BywnxAi0He+M6lsRtANBvbqJHmqM8T64Lx7azHJWbv/vSKVJfEbv3XyYpxeDhpV7gFi5mfgeA==}
+    dependencies:
+      '@types/zrender': 4.0.1
+    dev: true
+
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
     dev: true
@@ -1747,6 +1759,10 @@ packages:
       '@types/node': 17.0.10
     dev: true
     optional: true
+
+  /@types/zrender/4.0.1:
+    resolution: {integrity: sha512-IyTRf30jPOXK1+1RChI/78U6aV9hyWYf/vhL96Vt66oDz9es/BDjeKpvbNZSOHVA7zAReOwJcmdZS5AGAqhygw==}
+    dev: true
 
   /@typescript-eslint/eslint-plugin/5.10.2_1b08c9fe96cd93d27d9e149ef6ced69d:
     resolution: {integrity: sha512-4W/9lLuE+v27O/oe7hXJKjNtBLnZE8tQAFpapdxwSVHqtmIoPB1gph3+ahNwVuNL37BX7YQHyGF9Xv6XCnIX2Q==}
@@ -3302,6 +3318,13 @@ packages:
       jsbn: 0.1.1
       safer-buffer: 2.1.2
     dev: true
+
+  /echarts/5.3.0:
+    resolution: {integrity: sha512-zENufmwFE6WjM+24tW3xQq4ICqQtI0CGj4bDVDNd3BK3LtaA/5wBp+64ykIyKy3QElz0cieKqSYP4FX9Lv9MwQ==}
+    dependencies:
+      tslib: 2.3.0
+      zrender: 5.3.0
+    dev: false
 
   /ee-first/1.1.1:
     resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
@@ -6152,6 +6175,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /resize-detector/0.3.0:
+    resolution: {integrity: sha512-R/tCuvuOHQ8o2boRP6vgx8hXCCy87H1eY9V5imBYeVNyNVpuL9ciReSccLj2gDcax9+2weXy3bc8Vv+NRXeEvQ==}
+    dev: false
+
   /resolve-from/4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
     engines: {node: '>=4'}
@@ -6757,6 +6784,10 @@ packages:
   /tslib/1.14.1:
     resolution: {integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==}
     dev: true
+
+  /tslib/2.3.0:
+    resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
+    dev: false
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
@@ -7435,6 +7466,23 @@ packages:
       vue: 3.2.31
     dev: false
 
+  /vue-echarts/6.0.2_echarts@5.3.0+vue@3.2.31:
+    resolution: {integrity: sha512-9xDokauJtAc389MNKbwi1I0VDmp4Y6ndAJTQ8T9K7H0ffosTe1OJSJbUtkT7/fVLDFzlCcmg2TfAKaMzbpg5yQ==}
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.5
+      echarts: ^5.1.2
+      vue: ^2.6.12 || ^3.1.1
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      echarts: 5.3.0
+      resize-detector: 0.3.0
+      vue: 3.2.31
+      vue-demi: 0.12.1_vue@3.2.31
+    dev: false
+
   /vue-eslint-parser/8.2.0_eslint@8.9.0:
     resolution: {integrity: sha512-hvl8OVT8imlKk/lQyhkshqwQQChzHETcBd5abiO4ePw7ib7QUZLfW+2TUrJHKUvFOCFRJrDin5KJO9OHzB5bRQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
@@ -7867,3 +7915,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zrender/5.3.0:
+    resolution: {integrity: sha512-Ln2QB5uqI1ftNYMtCRxd+XDq6MOttLgam2tmhKAVA+j0ko47UT+VNlDvKTkqe4K2sJhBvB0EhYNLebqlCTjatQ==}
+    dependencies:
+      tslib: 2.3.0
+    dev: false

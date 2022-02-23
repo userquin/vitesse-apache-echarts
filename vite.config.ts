@@ -7,7 +7,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Markdown from 'vite-plugin-md'
 import { VitePWA } from 'vite-plugin-pwa'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
+import { vueI18n as VueI18n } from '@intlify/vite-plugin-vue-i18n'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import LinkAttributes from 'markdown-it-link-attributes'
@@ -132,6 +132,12 @@ export default defineConfig({
       'vue-router',
       '@vueuse/core',
       '@vueuse/head',
+      'echarts/core',
+      'echarts/core',
+      'echarts/renderers',
+      'echarts/charts',
+      'echarts/components',
+      'vue-echarts',
     ],
     exclude: [
       'vue-demi',
