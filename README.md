@@ -63,6 +63,6 @@ these are the changes I made, you can see it here https://github.com/userquin/vi
 
 **node_modules/resize-detector**
 - `package.json` add  `"type": "module"`
-- 
+
 **node_modules/zrender**
 - `package.json` add  `"type": "module"`
