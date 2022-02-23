@@ -136,7 +136,7 @@ export default defineConfig({
       'echarts/renderers',
       'echarts/charts',
       'echarts/components',
-      'vue-echarts',
+      'vue-echarts/dist/index.esm.js',
     ],
     exclude: [
       'vue-demi',
