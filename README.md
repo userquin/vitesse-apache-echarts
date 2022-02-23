@@ -4,7 +4,7 @@ these are the changes I made, you can see it here https://github.com/userquin/vi
 - `package.json`: add `"type": "module"`
 - `vite.config.ts`: changed the import for `VueI18n` and included some entries on `optimizedDeps/include` option
 - `tsconfig.json`: changed `module` to `ESNext` instead `es2016`
-- `src/components/ChartComponent.vue`  using `vue-echarts/dist/index.esm.js` instead `vue-echarts` (maybe we need to also change the `package.json` of `vue-echarts`)
+- ~~`src/components/ChartComponent.vue`  using `vue-echarts/dist/index.esm.js` instead `vue-echarts` (maybe we need to also change the `package.json` of `vue-echarts`)~~
 - `pnpm install`: once dependencies installed you must modify the following dependencies (we can also apply something similar to `echarts`...)
 
 **node_modules/echarts**
